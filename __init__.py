@@ -2,7 +2,7 @@ import telebot
 import config
 import random
 
-bot = telebot.TeleBot('5212671050:AAG9aQQHH_SXFyFSNOKTsB61n6T-E6GiOJk')
+bot = telebot.TeleBot(config.telegram_token)
 
 prog_number = 0
 attemps = 0
@@ -21,8 +21,6 @@ def start_game(message):
     attemps = 5
     name = message.from_user.first_name
     bot.send_message(message.chat.id, f'{name} enter a number between 0 and 15 \nYou have 5 attemps')
-
-
 
 
 @bot.message_handler(content_types=['text'])
