@@ -16,7 +16,7 @@ def welcome_player(message):
 
 @bot.message_handler(commands=['start_game'])
 def start_game(message):
-    global prog_number, attemps, end_game
+    global prog_number, attemps
     prog_number = random.randint(0, 15)
     attemps = 5
     name = message.from_user.first_name
